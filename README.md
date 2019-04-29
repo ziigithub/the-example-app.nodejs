@@ -1,5 +1,5 @@
 ## The node.js example app
-## Edit test - 29.4.19
+## Edit test - 29.4.19.
 
 [![CircleCI](https://img.shields.io/circleci/project/github/contentful/the-example-app.nodejs.svg)](https://circleci.com/gh/contentful/the-example-app.nodejs)
 
