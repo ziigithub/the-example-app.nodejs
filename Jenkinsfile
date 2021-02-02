@@ -26,7 +26,7 @@ pipeline {
         }
         stage('unit-test') {
             steps {
-                sh 'npm test:unit'
+                sh 'npm run test:unit'
                 sh 'sleep 5m'
             }
         }
