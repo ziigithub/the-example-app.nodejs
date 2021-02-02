@@ -16,7 +16,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                //sh 'cd the-example-app.nodejs'
+                sh 'npm install -g contentful-cli'
                 sh 'npm install'
                 sh 'npm run start:dev &'
                 //sh 'mvn clean package'
