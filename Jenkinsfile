@@ -1,7 +1,9 @@
 pipeline {
     //agent { docker 'node:dubnium-alpine3.11' }
     agent {
-        docker.image('node:dubnium-alpine3.11').withRun('-p 3000:3000')   
+        script {
+            docker.image('node:dubnium-alpine3.11').withRun('-p 3000:3000')   
+        }
     }
     stages {
         stage ('Checkout') {
