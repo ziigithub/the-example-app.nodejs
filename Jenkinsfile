@@ -8,10 +8,24 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh 'echo Hello'
+                sh 'cd the-example-app.nodejs'
+                sh 'npm install'
+                sh 'npm run start:dev'
                 //sh 'mvn clean package'
                 //junit '**/target/surefire-reports/TEST-*.xml'
                 //archiveArtifacts artifacts: 'target/*.war', fingerprint: true
+            }
+        }
+        stage('Test') {
+            steps {
+                sh 'echo Hello'
+                
+            }
+        }
+        stage('Deploy-to-DEV') {
+            steps {
+                sh 'echo Hello'
+                
             }
         }
     }
