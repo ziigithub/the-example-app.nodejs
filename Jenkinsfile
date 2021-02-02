@@ -3,12 +3,14 @@ pipeline {
     stages {
         stage ('Checkout') {
           steps {
-            git 'https://github.com/liorbenami1/the-example-app.nodejs.git'
+            git \
+            branch: 'liorbenami_branch', \
+            url: 'https://github.com/liorbenami1/the-example-app.nodejs.git'
           }
         }
         stage('Build') {
             steps {
-                sh 'cd the-example-app.nodejs'
+                //sh 'cd the-example-app.nodejs'
                 sh 'npm install'
                 sh 'npm run start:dev'
                 //sh 'mvn clean package'
