@@ -24,8 +24,9 @@ pipeline {
                 //archiveArtifacts artifacts: 'target/*.war', fingerprint: true
             }
         }
-        stage('Test') {
+        stage('unit-test') {
             steps {
+                sh 'cd test/unit'
                 sh 'npm test'
                 sh 'sleep 5m'
             }
