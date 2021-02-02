@@ -8,9 +8,9 @@ pipeline {
         }
         stage('Build') {
             steps {
-                #sh 'mvn clean package'
-                #junit '**/target/surefire-reports/TEST-*.xml'
-                #archiveArtifacts artifacts: 'target/*.war', fingerprint: true
+                //sh 'mvn clean package'
+                //junit '**/target/surefire-reports/TEST-*.xml'
+                //archiveArtifacts artifacts: 'target/*.war', fingerprint: true
             }
         }
     }
