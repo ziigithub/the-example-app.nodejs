@@ -1,7 +1,8 @@
 pipeline {
     agent { 
         docker {
-            image 'node:dubnium-alpine3.11'
+            //image 'node:dubnium-alpine3.11'
+            image 'node:9'
             args '-p 3000:3000'
         }
         //docker 'node:dubnium-alpine3.11' 
