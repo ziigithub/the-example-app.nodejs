@@ -1,16 +1,16 @@
 pipeline {
-    agent { docker 'maven:3.5-alpine' }
+    agent { docker 'node:dubnium-alpine3.11' }
     stages {
         stage ('Checkout') {
           steps {
-            git 'https://github.com/lev-tmp/jenkins2-course-spring-petclinic.git'
+            git 'https://github.com/liorbenami1/the-example-app.nodejs.git'
           }
         }
         stage('Build') {
             steps {
-                sh 'mvn clean package'
-                junit '**/target/surefire-reports/TEST-*.xml'
-                archiveArtifacts artifacts: 'target/*.war', fingerprint: true
+                #sh 'mvn clean package'
+                #junit '**/target/surefire-reports/TEST-*.xml'
+                #archiveArtifacts artifacts: 'target/*.war', fingerprint: true
             }
         }
     }
