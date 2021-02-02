@@ -26,8 +26,7 @@ pipeline {
         }
         stage('unit-test') {
             steps {
-                sh 'cd test/unit'
-                sh 'npm test'
+                sh 'npm test:unit'
                 sh 'sleep 5m'
             }
         }
