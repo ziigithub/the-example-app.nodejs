@@ -18,7 +18,7 @@ pipeline {
             steps {
                 //sh 'cd the-example-app.nodejs'
                 sh 'npm install'
-                //sh 'npm run start:dev'
+                sh 'npm run start:dev &'
                 //sh 'mvn clean package'
                 //junit '**/target/surefire-reports/TEST-*.xml'
                 //archiveArtifacts artifacts: 'target/*.war', fingerprint: true
