@@ -8,6 +8,7 @@ pipeline {
         }
         stage('Build') {
             steps {
+                sh 'echo Hello'
                 //sh 'mvn clean package'
                 //junit '**/target/surefire-reports/TEST-*.xml'
                 //archiveArtifacts artifacts: 'target/*.war', fingerprint: true
