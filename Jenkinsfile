@@ -19,7 +19,6 @@ pipeline {
                 //sh 'cd the-example-app.nodejs'
                 sh 'npm install'
                 sh 'npm run start:dev &'
-                sh 'sleep 5m'
                 //sh 'mvn clean package'
                 //junit '**/target/surefire-reports/TEST-*.xml'
                 //archiveArtifacts artifacts: 'target/*.war', fingerprint: true
@@ -27,8 +26,8 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh 'echo Hello'
-                
+                sh 'npm test'
+                sh 'sleep 5m'
             }
         }
         stage('Deploy-to-DEV') {
